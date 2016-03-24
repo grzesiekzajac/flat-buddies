@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+      http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+    
+	<persistence-unit name="JavaEE">
+	     <provider>
+         org.eclipse.persistence.jpa.PersistenceProvider
+         </provider>
+         <exclude-unlisted-classes>false</exclude-unlisted-classes>
+         <properties>
+                 <property name="eclipselink.logging.level" value="FINE" />
+                 <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+                 <property name="eclipselink.jdbc.url" value="jdbc:mysql://188.95.29.67:3306/javadb" />
+                 <property name="eclipselink.jdbc.characterEncoding" value="UTF-8" />
+                 <property name="eclipselink.jdbc.user" 	value="javauser" />
+                 <property name="eclipselink.jdbc.password" value="javauser12" />
+                  <!--  <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
+                 <property name="eclipselink.ddl-generation.output-mode" value="database" />
+                 <property name="eclipselink.orm.throw.exceptions" value="true" />
+                 <property name="eclipselink.query-results-cache" value="false"/>
+         </properties>
+	</persistence-unit>
+</persistence>
